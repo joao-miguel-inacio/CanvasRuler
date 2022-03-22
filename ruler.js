@@ -9,16 +9,24 @@ function drawRulerXAxis(canvasHeight) {
     if (i%10===0){
     context.moveTo(0,i+10);
     context.lineTo(10,i+10);
+      if(i%100===0){
+      context.moveTo(0,i+10);
+      context.lineTo(30,i+10);
+      }
     context.stroke ();
     }
   }
 }
 
-function drawRulerYAxis(canvasWeight) {
-  for (let i = 0; i < canvasWeight; i++) {
+function drawRulerYAxis(canvasWidth) {
+  for (let i = 0; i < canvasWidth; i++) {
     if (i%10===0){
     context.moveTo(i+10, 10);
     context.lineTo(i+10, 0);
+      if(i%100===0){
+      context.moveTo(i+10, 30);
+      context.lineTo(i+10, 0);
+      }
     context.stroke ();
     }
   }
